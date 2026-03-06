@@ -1,0 +1,48 @@
+/* Přidáme do css/recruitment.css */
+.highlighted-links {
+    text-align: center;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    background-color: #ffeb3b; /* Světlá barva pozadí, aby byly odkazy viditelné */
+    border: 2px solid #fbc02d; /* Okraj, aby se sekce zvýraznila */
+    border-radius: 5px;
+    position: absolute; /* Center the container vertically */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rgbTransition 5s infinite; /* Jemné RGB přechody */
+}
+
+.highlighted-links p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.highlight-link {
+    display: block;
+    font-size: 1.1em;
+    color: #d32f2f; /* Výrazná barva odkazu */
+    text-decoration: none;
+    margin: 10px 0;
+    animation: rgbTextTransition 5s infinite; /* Jemné RGB přechody pro text */
+}
+
+.highlight-link:hover {
+    text-decoration: underline;
+}
+
+/* Jemné RGB přechody pro pozadí */
+@keyframes rgbTransition {
+    0% { background-color: #ffeb3b; }
+    33% { background-color: #00ff00; }
+    66% { background-color: #0000ff; }
+    100% { background-color: #ffeb3b; }
+}
+
+/* Jemné RGB přechody pro text */
+@keyframes rgbTextTransition {
+    0% { color: #d32f2f; }
+    33% { color: #32d32f; }
+    66% { color: #2f32d3; }
+    100% { color: #d32f2f; }
+}

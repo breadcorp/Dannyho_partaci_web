@@ -1,0 +1,25 @@
+.footer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Optional shadow for better separation */
+    position: absolute;
+    bottom: 0;
+}
+.footer .created-by {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .created-by .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.footer .created-by .text {
+    font-size: 18px;
+}

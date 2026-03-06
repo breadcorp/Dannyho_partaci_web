@@ -1,0 +1,130 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.main-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden; /* Zajišťuje, že obsah nepřekročí hranice kontejneru */
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.7); /* Poloprůhledné pozadí */
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 2px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ccc;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../photos/ets2_20240510_201140_00_edited.jpg'); /* Správná relativní cesta */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px) brightness(0.8); /* Aplikujeme rozmazání pouze na obrázek */
+    image-resolution: 300dpi;
+    image-resolution: from-image 300dpi;
+    image-resolution: 300dpi snap;
+    z-index: 1; /* Posíláme obrázek do pozadí */
+}
+
+.text-container {
+    position: relative;
+    text-align: center;
+    color: #EEB400;
+    z-index: 2; /* Posíláme text do popředí */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrujeme text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Přidáváme stín textu */
+}
+
+.text-container h1 {
+    font-size: 4em;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace; /* Stylizujeme hlavní nadpis */
+    animation: fadeIn 2s ease-in-out; /* Přidáváme animaci pro text */
+}
+
+.text-container p {
+    font-size: 1.5em;
+    margin: 10px 0;
+    font-family: 'Tahoma', sans-serif; /* Stylizujeme podtext */
+    animation: fadeIn 3s ease-in-out; /* Přidáváme animaci pro text */
+}
+
+/* Animace pro text */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsivní styl pro hamburger menu */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+}

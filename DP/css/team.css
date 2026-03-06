@@ -1,0 +1,82 @@
+/* Globální stylování */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Hlavní obsah */
+main {
+    margin-top: 60px; /* Prostor pro pevnou navigační lištu */
+    padding: 20px;
+}
+
+/* Stylování sekcí */
+.mbox {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+    padding: 10px;
+    background-color: #555;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Kontejner pro boxy */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Boxy */
+.box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.333% - 40px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box img {
+    width: 150px; /* Nastavení šířky obrázku */
+    height: 150px; /* Nastavení výšky obrázku */
+    border-radius: 50%; /* Kulatý tvar obrázků */
+    object-fit: cover; /* Zachování poměru stran */
+}
+
+.box h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.box p {
+    font-size: 14px;
+    color: #777;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Responsivní stylování pro boxy */
+@media screen and (max-width: 768px) {
+    .box {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .box {
+        width: 100%;
+    }
+}
